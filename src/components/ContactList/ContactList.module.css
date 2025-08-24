@@ -1,0 +1,14 @@
+.list {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.error {
+    color: red;
+    font-weight: 600;
+}
+
+.loading {
+    font-weight: 600;
+}

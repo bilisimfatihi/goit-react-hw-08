@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
+.header div {
+    display: flex;
+    gap: 10px;
+}

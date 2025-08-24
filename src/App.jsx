@@ -8,8 +8,9 @@ import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import ContactsPage from "./pages/ContactsPage/ContactsPage";
 
-import "./App.css";
 import Layout from "./components/Layout/Layout";
+
+import "./App.css";
 
 function App() {
   const dispatch = useDispatch();

@@ -1,9 +1,11 @@
-import React from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
+
+import styles from "./LoginPage.module.css";
 
 const LoginPage = () => {
   return (
-    <div>
+    <div className={styles.container}>
+      <h2>Login Page</h2>
       <LoginForm />
     </div>
   );

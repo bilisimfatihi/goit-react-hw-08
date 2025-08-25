@@ -3,6 +3,8 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { logIn } from "../../redux/auth/operations";
 
+import styles from "./LoginForm.module.css";
+
 const LoginSchema = Yup.object().shape({
   email: Yup.string()
     .email("Geçerli bir e-posta giriniz")
@@ -25,16 +27,24 @@ const LoginForm = () => {
       }}
     >
       {({ isSubmitting }) => (
-        <Form>
+        <Form className={styles.form}>
           <label>
             Email:
             <Field type="email" name="email" />
-            <ErrorMessage name="email" component="div" />
+            <ErrorMessage
+              className={styles.error}
+              name="email"
+              component="div"
+            />
           </label>
           <label>
             Password:
             <Field type="password" name="password" />
-            <ErrorMessage name="password" component="div" />
+            <ErrorMessage
+              className={styles.error}
+              name="password"
+              component="div"
+            />
           </label>
           <button type="submit" disabled={isSubmitting}>
             Login

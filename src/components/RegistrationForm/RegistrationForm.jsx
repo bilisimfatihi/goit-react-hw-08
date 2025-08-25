@@ -3,6 +3,8 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
 
+import styles from "./Registration.module.css";
+
 const RegisterSchema = Yup.object().shape({
   name: Yup.string().min(2, "İsim çok kısa").required("İsim gerekli"),
   email: Yup.string()
@@ -26,21 +28,33 @@ const RegistrationForm = () => {
       }}
     >
       {({ isSubmitting }) => (
-        <Form>
+        <Form className={styles.form}>
           <label>
             Name:
             <Field type="text" name="name" />
-            <ErrorMessage name="name" component="div" />
+            <ErrorMessage
+              className={styles.error}
+              name="name"
+              component="div"
+            />
           </label>
           <label>
             Email:
             <Field type="email" name="email" />
-            <ErrorMessage name="email" component="div" />
+            <ErrorMessage
+              className={styles.error}
+              name="email"
+              component="div"
+            />
           </label>
           <label>
             Password:
             <Field type="password" name="password" />
-            <ErrorMessage name="password" component="div" />
+            <ErrorMessage
+              className={styles.error}
+              name="password"
+              component="div"
+            />
           </label>
           <button type="submit" disabled={isSubmitting}>
             Register

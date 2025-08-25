@@ -1,3 +1,3 @@
-const selectNameFilter = (state) => state.filters.name;
+const selectFilter = (state) => state.filters.name;
 
-export { selectNameFilter };
+export { selectFilter };

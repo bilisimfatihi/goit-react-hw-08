@@ -51,7 +51,7 @@ const contactsSlice = createSlice({
         state.isLoading = true;
         state.error = null;
       })
-      // LOGOUT → kişileri sıfırla
+      // LOGOUT
       .addCase(logOut.fulfilled, (state) => {
         state.items = [];
         state.isLoading = false;

@@ -4,12 +4,15 @@
     margin-bottom: 20px;
 }
 
-.input {
+.form input {
     padding: 5px 10px;
-    font-size: 16px;
+    font-size: 18px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
 }
 
-.button {
+.form button {
     padding: 5px 15px;
     font-size: 16px;
     background-color: #4caf50;
@@ -19,6 +22,13 @@
     transition: 0.2s;
 }
 
-.button:hover {
+.form button:hover {
     background-color: #45a049;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
 }
